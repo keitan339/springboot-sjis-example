@@ -1,0 +1,29 @@
+services:
+  dev:
+    build:
+      context: ./dev
+      dockerfile: Dockerfile
+      args:
+        USER_NAME: developer
+        USER_UID: ${HOST_UID}
+        USER_GID: ${HOST_GID}
+        GIT_USER_NAME: ${GIT_USER_NAME}
+        GIT_USER_EMAIL: ${GIT_USER_EMAIL}
+        DOCKER_GID: ${HOST_DOCKER_GID}
+
+        JAVA_VERSION: 21
+        MAVEN_VERSION: 3.9.10
+        GRADLE_VERSION: 8.14.3
+        NODE_VERSION: 22.17.0
+
+    user: ${HOST_UID}
+    volumes:
+      - ..:/workspace:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${SSH_AUTH_SOCK}:/tmp/ssh-agent.sock
+      - ${GIT_HUB_CONFIG_DIRECTORY}:/home/developer/.config/gh
+      - claude-data:/home/developer/.claude
+    privileged: true
+
+volumes:
+  claude-data:

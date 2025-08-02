@@ -1,0 +1,55 @@
+{
+  // Java言語設定
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+
+  // Google Java Styleフォーマット設定
+  "java.format.settings.url": "/workspace/config/fmt/googleJavaFormat.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.saveActions.organizeImports": true,
+
+  // エディタ設定
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "all",
+
+  // ファイル保存時の自動フォーマット
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+
+  // Java拡張機能の設定
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  // xml拡張機能の設定
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  // ファイルの改行コード
+  "files.eol": "\n",
+
+  // 末尾の空白を削除
+  "files.trimTrailingWhitespace": true,
+
+  // 最終行に改行を追加
+  "files.insertFinalNewline": true,
+
+  // インポートの整理設定
+  "java.completion.importOrder": ["", "javax", "java", "#"],
+
+  // 静的インポートの設定
+  "java.sources.organizeImports.staticStarThreshold": 99,
+  "java.sources.organizeImports.starThreshold": 99
+}

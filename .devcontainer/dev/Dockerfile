@@ -17,7 +17,7 @@ ENV LANG=ja_JP.UTF-8 \
     LANGUAGE=ja_JP.UTF-8 \
     LC_ALL=ja_JP.UTF-8 \
     TZ=Asia/Tokyo
-    
+
 # 利用シェルをbashに変更
 RUN echo "dash dash/sh boolean false" | debconf-set-selections \
     && dpkg-reconfigure dash || true

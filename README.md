@@ -2,6 +2,8 @@
 
 内部のコードはUTF-8のまま、データ送受信をSJIS(MS932)で行う方法。
 
+mvn spring-boot:runで起動した後にhttp://localhost:8080/でアクセスして動作確認可能。
+
 ## 画面表示
 
 metaタグでcharsetをms932に設定する。

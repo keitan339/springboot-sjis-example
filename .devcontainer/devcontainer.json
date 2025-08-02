@@ -6,6 +6,11 @@
 
   // デフォルトのPortForwarding
   "forwardPorts": [22],
+  "portsAttributes": {
+    "22": {
+      "label": "ssh"
+    }
+  },
 
   // ホスト側とコンテナ側の環境を合わせるためにenvファイルを作成
   "initializeCommand": "./.devcontainer/env.sh",

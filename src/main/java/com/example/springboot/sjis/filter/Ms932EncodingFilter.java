@@ -1,22 +1,20 @@
 package com.example.springboot.sjis.filter;
 
-import java.io.IOException;
-
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
 
 public class Ms932EncodingFilter implements Filter {
 
-    private String encoding = "MS932";
+  private String encoding = "MS932";
 
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
-        request.setCharacterEncoding(this.encoding);
-        chain.doFilter(request, response);
-    }
-
+  @Override
+  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+      throws IOException, ServletException {
+    request.setCharacterEncoding(this.encoding);
+    chain.doFilter(request, response);
+  }
 }

@@ -1,6 +1,12 @@
 package com.example.springboot.sjis.filter;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -32,7 +38,7 @@ class Ms932EncodingFilterTest {
   }
 
   @Test
-  void doFilterがリクエストエンコーディングをMS932に設定する() throws IOException, ServletException {
+  void doFilterSetsRequestEncodingToMs932() throws IOException, ServletException {
     // テスト実行
     filter.doFilter(request, response, filterChain);
 

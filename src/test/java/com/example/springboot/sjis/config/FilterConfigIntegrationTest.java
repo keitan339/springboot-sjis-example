@@ -1,6 +1,7 @@
 package com.example.springboot.sjis.config;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.example.springboot.sjis.filter.Ms932EncodingFilter;
 import org.junit.jupiter.api.Test;

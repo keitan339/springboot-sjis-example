@@ -1,6 +1,8 @@
 package com.example.springboot.sjis.config;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.example.springboot.sjis.filter.Ms932EncodingFilter;
 import org.junit.jupiter.api.Test;
@@ -34,7 +36,7 @@ class FilterConfigTest {
   }
 
   @Test
-  void 複数のURLパターンが正しく設定される() {
+  void multipleUrlPatternsAreConfiguredCorrectly() {
     // FilterConfigのインスタンス作成
     FilterConfig filterConfig = new FilterConfig();
 
@@ -55,7 +57,7 @@ class FilterConfigTest {
   }
 
   @Test
-  void 空のURLパターン配列でも正常に動作する() {
+  void emptyUrlPatternArrayWorksCorrectly() {
     // FilterConfigのインスタンス作成
     FilterConfig filterConfig = new FilterConfig();
 
@@ -73,7 +75,7 @@ class FilterConfigTest {
   }
 
   @Test
-  void 単一のURLパターンでも正常に動作する() {
+  void singleUrlPatternWorksCorrectly() {
     // FilterConfigのインスタンス作成
     FilterConfig filterConfig = new FilterConfig();
 

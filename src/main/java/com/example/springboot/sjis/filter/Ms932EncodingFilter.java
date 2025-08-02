@@ -7,6 +7,9 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 
+/**
+ * MS932（Windows-31J）エンコーディングを設定するサーブレットフィルター
+ */
 public class Ms932EncodingFilter implements Filter {
 
   private String encoding = "MS932";

@@ -7,12 +7,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 
+/**
+ * フィルター設定クラス
+ */
 @Configuration
 public class FilterConfig {
 
   @Value("${filter.ms932.url-patterns}")
   private String[] urlPatterns;
 
+  /**
+   * MS932エンコーディングフィルターのBean定義
+   *
+   * @return MS932エンコーディングフィルターの登録Bean
+   */
   @Bean
   public FilterRegistrationBean<Ms932EncodingFilter> ms932EncodingFilter() {
     FilterRegistrationBean<Ms932EncodingFilter> registrationBean = new FilterRegistrationBean<>();

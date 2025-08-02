@@ -25,11 +25,13 @@ public class FilterConfig {
   public FilterRegistrationBean<Ms932EncodingFilter> ms932EncodingFilter() {
     FilterRegistrationBean<Ms932EncodingFilter> registrationBean = new FilterRegistrationBean<>();
 
+    // Filterを適用
     registrationBean.setFilter(new Ms932EncodingFilter());
 
-    // application.propertiesから読み込んだURLパターンを設定
+    // Filterを適用するURLを設定
     registrationBean.addUrlPatterns(urlPatterns);
 
+    // 優先順位を最優先に設定
     registrationBean.setOrder(Ordered.HIGHEST_PRECEDENCE);
 
     return registrationBean;

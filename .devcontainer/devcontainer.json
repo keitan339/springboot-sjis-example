@@ -5,10 +5,13 @@
   "dockerComposeFile": ["./docker-compose.yml"],
 
   // デフォルトのPortForwarding
-  "forwardPorts": [22],
+  "forwardPorts": [22, 8080],
   "portsAttributes": {
     "22": {
       "label": "ssh"
+    },
+    "8080": {
+      "label": "spring-boot"
     }
   },
 
